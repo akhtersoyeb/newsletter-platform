@@ -1,4 +1,5 @@
 import CustomHead from "@/components/CustomHead";
+import Footer from "../navigation/Footer";
 
 type props = {
   title?: string
@@ -10,7 +11,10 @@ function UnauthenticatedLayout({ title, children }: props) {
 
     <>
       <CustomHead title={title} />
-      {children}
+      <main className="min-h-screen">
+        {children}
+      </main>
+      <Footer />
     </>
 
   )
