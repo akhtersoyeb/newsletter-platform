@@ -1,5 +1,6 @@
 import CustomHead from "@/components/CustomHead";
-import Footer from "../navigation/Footer";
+import Navbar from "@/components/navigation/Navbar";
+import Footer from "@/components/navigation/Footer";
 
 type props = {
   title?: string
@@ -11,7 +12,8 @@ function UnauthenticatedLayout({ title, children }: props) {
 
     <>
       <CustomHead title={title} />
-      <main className="min-h-screen">
+      <Navbar isAuthenticated={false} />
+      <main className="min-h-screen mx-auto max-w-7xl px-2.5 pt-20 sm:px-6 lg:px-8">
         {children}
       </main>
       <Footer />
